@@ -1,0 +1,17 @@
+{
+  "name": "download-torrents",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "dependencies": {
+    "cli-progress": "^3.11.2",
+    "inquirer": "^7.3.3",
+    "webtorrent": "^1.8.26"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "dev": "nodemon src/index.js",
+    "start": "node src/index.js"
+  },
+  "author": "Akshay K"
+}
