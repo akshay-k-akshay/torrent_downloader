@@ -30,10 +30,11 @@ async function downloadFile(magnetURI) {
                     speed: getSpeed(torrent.downloadSpeed)
                 });
             }, 1000);
-            if (torrent.done) {
+            torrent.on('done', () => {
+                console.log('torrent finished downloading')
                 bar.stop();
                 resolve()
-            }
+            })
         })
     })
 }
