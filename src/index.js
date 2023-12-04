@@ -1,7 +1,6 @@
 const WebTorrent = require('webtorrent')
 const cliProgress = require("cli-progress");
 const inquirer = require('inquirer');
-const fs = require('fs');
 const path = require('path');
 
 const client = new WebTorrent()
@@ -31,7 +30,7 @@ async function downloadFile(magnetURI) {
                 });
             }, 1000);
             torrent.on('done', () => {
-                console.log('torrent finished downloading')
+                console.log('\nTorrent finished downloading')
                 bar.stop();
                 resolve()
             })
